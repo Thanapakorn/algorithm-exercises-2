@@ -1,5 +1,17 @@
 function countPositivesSumNegatives(input) {
-  //Start coding here
+  let num1;
+  let num2;
+  if (!Array.isArray(input) || input === null) {
+    return [];
+  } else {
+    num1 = input
+      .filter((num) => num > 0)
+      .reduce((result, num) => result + num, 0);
+    num2 = input
+      .filter((num) => num < 0)
+      .reduce((result, num) => result + num, 0);
+    return [num1, num2];
+  }
 }
 
 let result1 = countPositivesSumNegatives([

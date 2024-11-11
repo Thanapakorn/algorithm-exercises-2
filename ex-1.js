@@ -1,5 +1,19 @@
 function fizzBuzz(n) {
-  //Start coding here
+  const newArr = [];
+  let count = 1;
+  while (count > 0 && count <= n) {
+    if (count % 3 === 0 && count % 5 === 0) {
+      newArr.push("FizzBuzz");
+    } else if (count % 5 === 0) {
+      newArr.push("Buzz");
+    } else if (count % 3 === 0) {
+      newArr.push("Fizz");
+    } else {
+      newArr.push(String(count));
+    }
+    count++;
+  }
+  return newArr;
 }
 
 let result1 = fizzBuzz(3);
